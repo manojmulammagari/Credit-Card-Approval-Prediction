@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Credit Card Approval Prediction</title>
+
+    <link rel="stylesheet" href="/static/css/style.css" />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="background-blur"></div>
+
+    <div class="container">
+      <!-- Brand -->
+      <div class="brand">
+        <div class="brand-logo">
+          <i class="fa-solid fa-credit-card"></i>
+        </div>
+
+        <div class="brand-text">
+          <h1>Credit Card Approval System</h1>
+          <p>Machine Learning Powered Eligibility Prediction</p>
+        </div>
+      </div>
+
+      <!-- Header -->
+
+      <div class="header">
+        <div class="header-icon">💳</div>
+
+        <h2>Credit Card Eligibility</h2>
+
+        <p class="subtitle">Enter your details to check your approval status</p>
+
+        <div class="security-badge">🔒 Secure Prediction • AI Powered</div>
+      </div>
+
+      <form id="predictionForm">
+        <div class="section-title">Applicant Information</div>
+
+        <!-- Row 1 -->
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>
+              <i class="fa-solid fa-user"></i>
+              Gender
+            </label>
+
+            <select id="gender">
+              <option value="0">Female</option>
+
+              <option value="1">Male</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>
+              <i class="fa-solid fa-cake-candles"></i>
+              Age
+            </label>
+
+            <input
+              type="number"
+              id="age"
+              placeholder="e.g. 30"
+              min="18"
+              max="100"
+              step="0.1"
+              required
+            />
+          </div>
+        </div>
+
+        <!-- Row 2 -->
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>
+              <i class="fa-solid fa-heart"></i>
+              Marital Status
+            </label>
+
+            <select id="married">
+              <option value="1">Married</option>
+
+              <option value="0">Single</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>
+              <i class="fa-solid fa-building-columns"></i>
+              Bank Customer
+            </label>
+
+            <select id="bank_customer">
+              <option value="1">Yes</option>
+
+              <option value="0">No</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="section-title">Employment Details</div>
+
+        <!-- Row 3 -->
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>
+              <i class="fa-solid fa-briefcase"></i>
+              Currently Employed
+            </label>
+
+            <select id="employed">
+              <option value="1">Yes</option>
+
+              <option value="0">No</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>
+              <i class="fa-solid fa-triangle-exclamation"></i>
+              Prior Default
+            </label>
+
+            <select id="prior_default">
+              <option value="1">No Default ✅</option>
+
+              <option value="0">Has Default ❌</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="section-title">Financial Information</div>
+
+        <!-- Row 4 -->
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>
+              <i class="fa-solid fa-sack-dollar"></i>
+              Annual Income ($)
+            </label>
+
+            <input
+              type="number"
+              id="income"
+              placeholder="e.g. 50000"
+              min="0"
+              step="1"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label>
+              <i class="fa-solid fa-wallet"></i>
+              Total Debt ($)
+            </label>
+
+            <input
+              type="number"
+              id="debt"
+              placeholder="e.g. 1.5"
+              min="0"
+              step="0.01"
+              required
+            />
+          </div>
+        </div>
+        <!-- Row 5 -->
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>
+              <i class="fa-solid fa-calendar-check"></i>
+              Years Employed
+            </label>
+
+            <input
+              type="number"
+              id="years_employed"
+              placeholder="e.g. 5"
+              min="0"
+              step="0.1"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label>
+              <i class="fa-solid fa-chart-line"></i>
+              Credit Score
+            </label>
+
+            <input
+              type="number"
+              id="credit_score"
+              placeholder="e.g. 8"
+              min="0"
+              step="1"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="section-title">Additional Information</div>
+
+        <!-- Industry -->
+
+        <div class="form-group">
+          <label>
+            <i class="fa-solid fa-industry"></i>
+            Industry
+          </label>
+
+          <select id="industry">
+            <option value="CommunicationServices">
+              Communication Services
+            </option>
+
+            <option value="ConsumerDiscretionary">
+              Consumer Discretionary
+            </option>
+
+            <option value="ConsumerStaples">Consumer Staples</option>
+
+            <option value="Education">Education</option>
+
+            <option value="Energy">Energy</option>
+
+            <option value="Financials">Financials</option>
+
+            <option value="Healthcare">Healthcare</option>
+
+            <option value="Industrials">Industrials</option>
+
+            <option value="InformationTechnology">
+              Information Technology
+            </option>
+
+            <option value="Materials">Materials</option>
+
+            <option value="Real Estate">Real Estate</option>
+
+            <option value="Research">Research</option>
+
+            <option value="Transport">Transport</option>
+
+            <option value="Utilities">Utilities</option>
+          </select>
+        </div>
+
+        <!-- Citizenship -->
+
+        <div class="form-group">
+          <label>
+            <i class="fa-solid fa-id-card"></i>
+            Citizenship Status
+          </label>
+
+          <select id="citizen">
+            <option value="ByBirth">By Birth</option>
+
+            <option value="ByOtherMeans">By Other Means</option>
+
+            <option value="Temporary">Temporary</option>
+          </select>
+        </div>
+
+        <button type="submit" id="submitBtn">
+          <span id="btnText">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            Check Eligibility
+          </span>
+
+          <span id="btnLoader" style="display: none"> ⏳ Checking... </span>
+        </button>
+
+        <!-- Result -->
+
+        <div id="resultBox" style="display: none">
+          <div id="resultIcon"></div>
+
+          <div id="resultText"></div>
+
+          <div id="confidenceText"></div>
+        </div>
+      </form>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>
