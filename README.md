@@ -1,175 +1,186 @@
-# 💳 Credit Card Approval Prediction using Machine Learning
+# 💳 Credit Card Approval Prediction
 
-A Flask-based Machine Learning web application that predicts whether a credit card application will be **Approved** or **Rejected** based on an applicant's financial and personal information.
+<div align="center">
+
+![Python](https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&logo=python)
+![Flask](https://img.shields.io/badge/Flask-Web%20Framework-black?style=for-the-badge&logo=flask)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Machine%20Learning-orange?style=for-the-badge&logo=scikitlearn)
+![XGBoost](https://img.shields.io/badge/XGBoost-Classifier-green?style=for-the-badge)
+![Render](https://img.shields.io/badge/Hosted%20on-Render-46E3B7?style=for-the-badge&logo=render)
+
+### A Machine Learning Web Application for Predicting Credit Card Approval Decisions
+
+**🌐 Live Demo:** https://credit-card-approval-prediction-2-mfxo.onrender.com
+
+> **Note:** The application is hosted on Render's free tier. The first request may take **30–60 seconds** while the server wakes up.
+
+</div>
 
 ---
 
 # 📌 Project Overview
 
-Financial institutions receive thousands of credit card applications every day. Manually reviewing each application is time-consuming and may lead to inconsistencies.
+Financial institutions receive thousands of credit card applications every day. Evaluating every application manually is time-consuming and can lead to inconsistent decisions.
 
-This project automates the credit approval process using Machine Learning by analyzing applicant information such as age, income, debt, employment history, credit score, and other financial attributes.
+This project uses **Machine Learning classification algorithms** to predict whether a credit card application is likely to be **Approved** or **Rejected** based on applicant information.
 
-The application predicts whether a customer is likely to receive credit card approval, helping reduce manual effort and improve decision-making.
-
----
-
-# 🎯 Objectives
-
-- Predict credit card approval accurately.
-- Compare multiple Machine Learning algorithms.
-- Build a web application using Flask.
-- Deploy the trained model for real-time prediction.
-- Provide an easy-to-use interface for users.
+The application provides real-time predictions through a simple and interactive web interface built with **Flask**.
 
 ---
 
-# 🛠 Technologies Used
+# ✨ Features
 
-- Python
-- Flask
-- Pandas
-- NumPy
-- Scikit-learn
-- XGBoost
-- Matplotlib
-- Seaborn
-- HTML
-- CSS
-- Joblib
-- Jupyter Notebook
+- ✅ Real-time credit card approval prediction
+- ✅ Machine Learning powered decision system
+- ✅ Clean and responsive web interface
+- ✅ Input validation
+- ✅ Confidence score for predictions
+- ✅ Fast model inference using Joblib
+- ✅ Online deployment using Render
 
 ---
 
-# 📂 Project Structure
+# 🧠 Machine Learning Pipeline
 
 ```
-Credit Card Approval Prediction
-│
-├── data/
-│   └── clean_dataset.csv
-│
-├── models/
-│   ├── model.joblib
-│   └── scaler.joblib
-│
-├── static/
-│   ├── css/
-│   └── images/
-│
-├── templates/
-│   ├── index.html
-│   └── result.html
-│
-├── app.py
-├── model_training.ipynb
-├── requirements.txt
-└── README.md
+Data Collection
+        │
+        ▼
+Data Cleaning
+        │
+        ▼
+Exploratory Data Analysis
+        │
+        ▼
+Feature Engineering
+        │
+        ▼
+Data Preprocessing
+        │
+        ▼
+Model Training
+        │
+        ▼
+Model Evaluation
+        │
+        ▼
+Best Model Selection
+        │
+        ▼
+Flask Deployment
 ```
 
 ---
 
-# 📊 Dataset
+# 📊 Algorithms Evaluated
 
-The dataset contains applicant information including:
-
-- Gender
-- Age
-- Debt
-- Married
-- Bank Customer
-- Years Employed
-- Prior Default
-- Employment Status
-- Credit Score
-- Driver's License
-- Income
-- Industry
-- Ethnicity
-- Citizenship
-- Approval Status (Target)
-
----
-
-# ⚙️ Data Preprocessing
-
-The following preprocessing steps were performed:
-
-- Data Cleaning
-- Missing Value Check
-- Duplicate Check
-- Log Transformation on Income
-- Debt-to-Income Ratio Feature Engineering
-- One-Hot Encoding
-- Feature Scaling
-- Train-Test Split
-
----
-
-# 🤖 Machine Learning Models
-
-The following algorithms were trained and evaluated:
+The following classification models were trained and evaluated:
 
 - Logistic Regression
 - Decision Tree Classifier
 - Random Forest Classifier
 - XGBoost Classifier
 
-The best-performing model is used for prediction in the Flask application.
+The best-performing model was selected and deployed.
 
 ---
 
-# 📈 Evaluation Metrics
+# 🛠️ Tech Stack
 
-Model performance was evaluated using:
+## Programming Language
 
-- Accuracy
-- Precision
-- Recall
-- F1 Score
-- Confusion Matrix
-- ROC-AUC Score
+- Python
+
+## Machine Learning
+
+- Scikit-learn
+- XGBoost
+- Joblib
+
+## Data Analysis
+
+- Pandas
+- NumPy
+
+## Backend
+
+- Flask
+
+## Frontend
+
+- HTML
+- CSS
+- JavaScript
+
+## Deployment
+
+- Render
 
 ---
 
-# 🌐 Web Application
+# 📁 Project Structure
 
-The Flask application allows users to:
-
-- Enter applicant details
-- Submit the application
-- Receive an instant prediction
-- View whether the application is Approved or Rejected
-
----
-
-# 🚀 Installation
-
-## Clone the Repository
-
-```bash
-git clone https://github.com/yourusername/Credit-Card-Approval-Prediction.git
+```
+Credit-Card-Approval-Prediction
+│
+├── app.py
+├── requirements.txt
+├── README.md
+├── model_training.ipynb
+│
+├── data
+│   └── clean_dataset.csv
+│
+├── models
+│   ├── card_model.joblib
+│   ├── encoders.joblib
+│   └── feature_cols.joblib
+│
+├── static
+│   ├── css
+│   └── js
+│
+└── templates
+    └── index.html
 ```
 
-## Navigate to Project
+---
+
+# 🚀 Live Demo
+
+Visit the deployed application:
+
+### https://credit-card-approval-prediction-2-mfxo.onrender.com
+
+---
+
+# ⚙️ Installation
+
+## Clone the repository
+
+```bash
+git clone https://github.com/manojmulammagari/Credit-Card-Approval-Prediction.git
+```
+
+## Move into the project
 
 ```bash
 cd Credit-Card-Approval-Prediction
 ```
 
-## Install Dependencies
+## Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Run the Flask Application
+## Run the Flask application
 
 ```bash
 python app.py
 ```
 
-The application will run at:
+Open your browser and visit:
 
 ```
 http://127.0.0.1:5000
@@ -177,76 +188,62 @@ http://127.0.0.1:5000
 
 ---
 
-# 📷 Application Workflow
+# 📈 Model Evaluation
 
-```
-User Input
-      │
-      ▼
-Flask Web Application
-      │
-      ▼
-Data Preprocessing
-      │
-      ▼
-Machine Learning Model
-      │
-      ▼
-Prediction
-      │
-      ▼
-Approved / Rejected
-```
+The models were evaluated using:
+
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+- Confusion Matrix
+
+The best-performing model was selected for deployment to provide reliable real-time predictions.
 
 ---
 
-# 📦 Requirements
+# 🎯 Prediction Inputs
 
-```
-Python 3.10+
+The application uses the following applicant information:
 
-Flask
-pandas
-numpy
-matplotlib
-seaborn
-scikit-learn
-xgboost
-joblib
-jupyter
-```
-
-Install using:
-
-```bash
-pip install -r requirements.txt
-```
+- Gender
+- Age
+- Debt
+- Marital Status
+- Bank Customer Status
+- Industry
+- Years Employed
+- Previous Default History
+- Employment Status
+- Credit Score
+- Citizenship
+- Annual Income
 
 ---
 
-# 📸 Screenshots
+# 📸 Application Screenshots
 
-Add screenshots here after deployment.
+> Add screenshots here after deployment.
 
-Example:
+Suggested screenshots:
 
 - Home Page
-- Input Form
-- Prediction Result
-- Confusion Matrix
-- Model Accuracy Comparison
+- Filled Input Form
+- Approval Prediction
+- Rejection Prediction
 
 ---
 
 # 🔮 Future Enhancements
 
-- Hyperparameter Optimization
-- Cross Validation
-- SHAP Explainability
-- Cloud Deployment
-- REST API Integration
 - User Authentication
-- Dashboard for Prediction Analytics
+- Explainable AI (SHAP/LIME)
+- REST API
+- Docker Support
+- Cloud Database Integration
+- Automated Model Retraining
+- CI/CD Pipeline
+- Performance Monitoring
 
 ---
 
@@ -254,24 +251,10 @@ Example:
 
 **Manoj Mulammagari**
 
-B.Tech – Artificial Intelligence
+- GitHub: https://github.com/manojmulammagari
 
 ---
 
-# 📄 License
+# ⭐ Support
 
-This project is developed for educational and academic purposes.
-
----
-
-# 🙏 Acknowledgements
-
-- Scikit-learn
-- XGBoost
-- Flask
-- Python Community
-- Open Source Contributors
-
----
-
-⭐ If you found this project useful, consider giving it a star on GitHub.
+If you found this project useful, please consider giving it a **⭐ Star** on GitHub.
