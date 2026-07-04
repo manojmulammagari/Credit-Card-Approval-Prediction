@@ -101,6 +101,8 @@ The best-performing model was selected and deployed.
 
 - Pandas
 - NumPy
+- Matplotlib
+- Seaborn
 
 ## Backend
 
